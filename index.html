@@ -63,7 +63,7 @@
           <div class="hero-showcase" aria-label="عرض منتج زئردة">
             <div class="product-frame">
               <span class="product-badge">50 EGP</span>
-              <img src="/assets/product/hero-duo.jpg" alt="زئردة باللونين الأزرق والوردي على خلفية بيضاء" fetchpriority="high" />
+              <img class="js-lightbox-image" src="/assets/product/hero-duo.jpg" alt="زئردة باللونين الأزرق والوردي على خلفية بيضاء" fetchpriority="high" tabindex="0" role="button" aria-label="Open product image preview" />
             </div>
             <div class="floating-card">
               <strong>Free shipping</strong>
@@ -132,23 +132,23 @@
           </div>
           <div class="gallery-grid">
             <figure class="gallery-card gallery-card-large">
-              <img src="/assets/product/real-laptop-cling.jpg" alt="زئردة زرقاء متعلقة على شاشة لابتوب" loading="lazy" />
+              <img class="js-lightbox-image" src="/assets/product/real-laptop-cling.jpg" alt="زئردة زرقاء متعلقة على شاشة لابتوب" loading="lazy" tabindex="0" role="button" aria-label="Open product image preview" />
               <figcaption>بتتعلق على اللابتوب وتخلي المكتب أظرف</figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/assets/product/real-duo-desk.jpg" alt="زئردة زرقاء ووردية واقفين على مكتب" loading="lazy" />
+              <img class="js-lightbox-image" src="/assets/product/real-duo-desk.jpg" alt="زئردة زرقاء ووردية واقفين على مكتب" loading="lazy" tabindex="0" role="button" aria-label="Open product image preview" />
               <figcaption>ألوان مبهجة وشكل بيشد العين</figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/assets/product/real-workspace-pink.jpg" alt="زئردة وردية وسط أدوات الشغل واللابتوب" loading="lazy" />
+              <img class="js-lightbox-image" src="/assets/product/real-workspace-pink.jpg" alt="زئردة وردية وسط أدوات الشغل واللابتوب" loading="lazy" tabindex="0" role="button" aria-label="Open product image preview" />
               <figcaption>تفصيلة مرحة وسط يوم الشغل</figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/assets/product/pink-isolated.jpg" alt="زئردة وردية على خلفية بيضاء" loading="lazy" />
+              <img class="js-lightbox-image" src="/assets/product/pink-isolated.jpg" alt="زئردة وردية على خلفية بيضاء" loading="lazy" tabindex="0" role="button" aria-label="Open product image preview" />
               <figcaption>صورة واضحة لشكل المنتج</figcaption>
             </figure>
             <figure class="gallery-card">
-              <img src="/assets/product/real-glow-hanging.jpg" alt="زئردة وردية متعلقة أسفل المكتب ومضيئة" loading="lazy" />
+              <img class="js-lightbox-image" src="/assets/product/real-glow-hanging.jpg" alt="زئردة وردية متعلقة أسفل المكتب ومضيئة" loading="lazy" tabindex="0" role="button" aria-label="Open product image preview" />
               <figcaption>مرنة وتتعلق بطرق مختلفة</figcaption>
             </figure>
           </div>
@@ -236,6 +236,11 @@
         <span>50 EGP</span>
         <a class="button" href="#order">Order Now</a>
         <a class="button button-ghost js-whatsapp-link" href="https://wa.me/201127344298" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+
+      <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Product image preview">
+        <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+        <img class="lightbox-image" alt="" />
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
