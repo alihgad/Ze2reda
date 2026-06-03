@@ -291,7 +291,10 @@ p {
 
 .product-frame img {
   width: 100%;
+  aspect-ratio: 4 / 5;
   border-radius: 32px;
+  object-fit: cover;
+  object-position: center;
   filter: drop-shadow(0 24px 28px rgba(23, 37, 47, 0.12));
 }
 
@@ -414,9 +417,19 @@ p {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
   background:
     radial-gradient(circle at 75% 18%, rgba(255, 200, 87, 0.26), transparent 12rem),
     var(--color-soft);
+}
+
+.gallery-card img[src*="real-laptop-cling"] {
+  object-position: center 42%;
+}
+
+.gallery-card img[src*="real-workspace-pink"],
+.gallery-card img[src*="real-glow-hanging"] {
+  object-position: center 35%;
 }
 
 .gallery-card figcaption {
