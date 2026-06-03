@@ -1,0 +1,13 @@
+<svg width="520" height="390" viewBox="0 0 520 390" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">تفاصيل زئردة</title>
+  <desc id="desc">رسم مؤقت يوضح حجم زئردة المناسب للمكتب.</desc>
+  <rect width="520" height="390" rx="56" fill="#F3FBF8"/>
+  <rect x="80" y="266" width="360" height="32" rx="16" fill="#22313F" opacity="0.14"/>
+  <path d="M163 222C155 143 207 73 286 70C365 67 416 135 409 214C403 285 354 330 286 332C218 334 170 293 163 222Z" fill="#FFC857"/>
+  <path d="M210 123C225 86 257 59 294 76C326 90 334 128 316 160" stroke="#22313F" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="244" cy="190" r="18" fill="#22313F"/>
+  <circle cx="326" cy="188" r="18" fill="#22313F"/>
+  <path d="M255 246C276 262 306 262 328 245" stroke="#22313F" stroke-width="13" stroke-linecap="round"/>
+  <path d="M159 168C130 149 106 149 85 169" stroke="#22313F" stroke-width="14" stroke-linecap="round"/>
+  <path d="M412 168C444 148 468 149 486 169" stroke="#22313F" stroke-width="14" stroke-linecap="round"/>
+</svg>
