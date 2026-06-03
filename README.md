@@ -1,30 +1,31 @@
 # Ze2reda Landing Page
 
-صفحة هبوط عربية RTL لمنتج **زئردة**، لعبة مكتب بلاستيكية صغيرة ومرحة لكسر ملل الشغل.
+An Arabic RTL landing page for **Ze2reda**, a small playful plastic desk toy made for quick fun during work or study.
 
-## التشغيل المحلي
+## Local Development
 
 ```bash
 npm run dev
 ```
 
-يفتح أمر التشغيل سيرفر محلي بسيط على المنفذ `5173` باستخدام Python، ثم يمكنك فتح:
+This starts a simple local server on port `5173` using Python. Open:
 
 ```text
 http://localhost:5173
 ```
 
-## البناء
+## Build
 
 ```bash
 npm run build
 ```
 
-ينشئ نسخة ثابتة داخل مجلد `dist/`.
+This creates a static production-ready version inside the `dist/` directory.
 
-## تعديل المحتوى
+## Editing Content
 
-- محتوى الصفحة الأساسي موجود في `index.html`.
-- الألوان والمسافات والـ responsive layout موجودة في `src/styles.css`.
-- إعداد واتساب والتحقق من الفورم موجودان في `src/main.js`.
-- صور المنتج المؤقتة موجودة في `public/assets/` ويمكن استبدالها لاحقاً بصور المنتج الحقيقية مع الحفاظ على نفس المسارات أو تحديثها في `index.html`.
+- Main page content lives in `index.html`.
+- Colors, spacing, typography, and responsive layout live in `src/styles.css`.
+- WhatsApp setup, order-form validation, and total-price logic live in `src/main.js`.
+- Product images live in `public/assets/` and `public/assets/product/`.
+- To replace product images, either keep the same file paths or update the image paths in `index.html`.
