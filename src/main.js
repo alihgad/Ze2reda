@@ -1,11 +1,13 @@
 const whatsappNumber = '201000000000';
-const whatsappMessage = 'مرحباً، عايز أطلب زئردة';
+const whatsappMessage = 'مرحبًا، عايز أطلب زئردة';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+const unitPrice = 149;
 
 const form = document.querySelector('#order-form');
 const successMessage = document.querySelector('#success-message');
 const errorElements = document.querySelectorAll('[data-error-for]');
 const whatsappLinks = document.querySelectorAll('.js-whatsapp-link');
+const totalPrice = document.querySelector('#total-price');
 
 whatsappLinks.forEach((link) => {
   link.setAttribute('href', whatsappUrl);
@@ -15,6 +17,13 @@ const errorMap = [...errorElements].reduce((currentMap, element) => {
   currentMap[element.dataset.errorFor] = element;
   return currentMap;
 }, {});
+
+const formatPrice = (quantity) => `${quantity * unitPrice} جنيه`;
+
+const updateTotal = () => {
+  const quantity = Math.max(Number(form.elements.quantity.value) || 1, 1);
+  totalPrice.textContent = formatPrice(quantity);
+};
 
 const setFieldError = (fieldName, message = '') => {
   const field = form.elements[fieldName];
@@ -58,6 +67,10 @@ const validateForm = () => {
 };
 
 form.addEventListener('input', (event) => {
+  if (event.target.name === 'quantity') {
+    updateTotal();
+  }
+
   if (event.target.name && errorMap[event.target.name]) {
     setFieldError(event.target.name);
   }
@@ -80,5 +93,8 @@ form.addEventListener('submit', (event) => {
 
   form.reset();
   form.elements.quantity.value = '1';
+  updateTotal();
   successMessage.hidden = false;
 });
+
+updateTotal();
