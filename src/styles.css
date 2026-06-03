@@ -19,7 +19,7 @@
   --radius-lg: 34px;
   --radius-md: 24px;
   --max-width: 1160px;
-  font-family: "Tajawal", "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
   background: #fff7fb;
   color: var(--color-ink);
 }
