@@ -1,7 +1,7 @@
-const whatsappNumber = '201000000000';
-const whatsappMessage = 'مرحبًا، عايز أطلب زئردة';
+const whatsappNumber = '201127344298';
+const whatsappMessage = 'مرحبًا، عايز أطلب زئردة داخل الإسكندرية';
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-const unitPrice = 149;
+const unitPrice = 50;
 
 const form = document.querySelector('#order-form');
 const successMessage = document.querySelector('#success-message');
@@ -56,7 +56,7 @@ const validateForm = () => {
   }
 
   if (!form.elements.address.value.trim()) {
-    errors.address = 'اكتب العنوان بالتفصيل.';
+    errors.address = 'اكتب العنوان داخل الإسكندرية بالتفصيل.';
   }
 
   if (!form.elements.quantity.value || Number(form.elements.quantity.value) < 1) {
