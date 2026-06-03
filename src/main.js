@@ -1,10 +1,8 @@
 const whatsappNumber = '201127344298';
-const whatsappMessage = 'مرحبًا، عايز أطلب زئردة داخل الإسكندرية';
-const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 const unitPrice = 50;
 
 const form = document.querySelector('#order-form');
-const successMessage = document.querySelector('#success-message');
 const errorElements = document.querySelectorAll('[data-error-for]');
 const whatsappLinks = document.querySelectorAll('.js-whatsapp-link');
 const totalPrice = document.querySelector('#total-price');
@@ -18,11 +16,12 @@ const errorMap = [...errorElements].reduce((currentMap, element) => {
   return currentMap;
 }, {});
 
-const formatPrice = (quantity) => `${quantity * unitPrice} جنيه`;
+const formatPrice = (quantity) => `${quantity * unitPrice} EGP`;
 
 const updateTotal = () => {
   const quantity = Math.max(Number(form.elements.quantity.value) || 1, 1);
   totalPrice.textContent = formatPrice(quantity);
+  return quantity * unitPrice;
 };
 
 const setFieldError = (fieldName, message = '') => {
@@ -66,6 +65,31 @@ const validateForm = () => {
   return errors;
 };
 
+const buildOrderMessage = () => {
+  const quantity = Math.max(Number(form.elements.quantity.value) || 1, 1);
+  const notes = form.elements.notes.value.trim() || '-';
+
+  return [
+    'New Order - Ze2reda',
+    `Name: ${form.elements.name.value.trim()}`,
+    `Phone: ${form.elements.phone.value.trim()}`,
+    `Address: ${form.elements.address.value.trim()}`,
+    `Quantity: ${quantity}`,
+    `Total: ${quantity * unitPrice} EGP`,
+    `Notes: ${notes}`,
+  ].join('\n');
+};
+
+const openWhatsAppOrder = () => {
+  const message = encodeURIComponent(buildOrderMessage());
+  const orderUrl = `${whatsappUrl}?text=${message}`;
+  const openedWindow = window.open(orderUrl, '_blank', 'noopener,noreferrer');
+
+  if (!openedWindow) {
+    window.location.href = orderUrl;
+  }
+};
+
 form.addEventListener('input', (event) => {
   if (event.target.name === 'quantity') {
     updateTotal();
@@ -74,8 +98,6 @@ form.addEventListener('input', (event) => {
   if (event.target.name && errorMap[event.target.name]) {
     setFieldError(event.target.name);
   }
-
-  successMessage.hidden = true;
 });
 
 form.addEventListener('submit', (event) => {
@@ -87,14 +109,10 @@ form.addEventListener('submit', (event) => {
   if (Object.keys(errors).length > 0) {
     Object.entries(errors).forEach(([fieldName, message]) => setFieldError(fieldName, message));
     form.querySelector('[aria-invalid="true"]')?.focus();
-    successMessage.hidden = true;
     return;
   }
 
-  form.reset();
-  form.elements.quantity.value = '1';
-  updateTotal();
-  successMessage.hidden = false;
+  openWhatsAppOrder();
 });
 
 updateTotal();
