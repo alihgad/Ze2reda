@@ -1,0 +1,18 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">زئردة - صورة مؤقتة للمنتج</title>
+  <desc id="desc">رسم توضيحي ملون للعبة مكتب بلاستيكية صغيرة بشكل مرح.</desc>
+  <rect width="900" height="900" rx="180" fill="#FFF4D8"/>
+  <circle cx="720" cy="180" r="86" fill="#FFCF5C" opacity="0.75"/>
+  <circle cx="160" cy="725" r="118" fill="#80D8C3" opacity="0.6"/>
+  <path d="M247 552C235 418 321 283 455 272C589 261 682 374 675 508C669 631 584 715 468 724C352 733 258 675 247 552Z" fill="#22B38F"/>
+  <path d="M298 547C288 441 356 335 462 327C568 318 642 407 636 512C631 610 564 676 472 683C380 690 307 644 298 547Z" fill="#35D3AA"/>
+  <path d="M365 266C376 183 438 137 500 165C551 188 566 250 536 310" stroke="#22313F" stroke-width="35" stroke-linecap="round"/>
+  <circle cx="405" cy="480" r="34" fill="#22313F"/>
+  <circle cx="535" cy="470" r="34" fill="#22313F"/>
+  <circle cx="417" cy="468" r="10" fill="white"/>
+  <circle cx="547" cy="458" r="10" fill="white"/>
+  <path d="M417 577C447 604 500 605 533 574" stroke="#22313F" stroke-width="22" stroke-linecap="round"/>
+  <path d="M292 393C244 361 207 357 172 386" stroke="#22313F" stroke-width="25" stroke-linecap="round"/>
+  <path d="M644 389C692 355 733 351 766 382" stroke="#22313F" stroke-width="25" stroke-linecap="round"/>
+  <ellipse cx="466" cy="743" rx="205" ry="42" fill="#22313F" opacity="0.12"/>
+</svg>
